@@ -16,7 +16,7 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
-    this.x = this.x + dt * speed;
+    this.x + dt * speed;
 }
 
 // Draw the enemy on the screen, required method for game
@@ -32,8 +32,15 @@ var Player = function() {
     this.y = 332;
 }
 
-Player.prototype.update = function(dt) {
-
+Player.prototype.update = function() {
+    //this should loop through each enemy and ask if the player is in the same position
+    //if the player is in the same position, player should return to start
+    allEnemies.forEach(function(enemy) {
+        if(enemy.x === player.x && enemy.y === player.y) {
+            player.x = 202;
+            player.y = 332;
+        }
+    })
 }
 
 Player.prototype.render = function() {
