@@ -32,7 +32,30 @@ var Player = function() {
     this.y = 332;
 }
 
+Player.prototype.update = function(dt) {
 
+}
+
+Player.prototype.render = function() {
+
+}
+
+Player.prototype.handleInput = function(keyCode) {
+    switch(keyCode) {
+        case 'left':
+            this.x - 101;
+            break;
+        case 'up':
+            this.y + 83;
+            break;
+        case 'right':
+            this.x +101;
+            break;
+        case 'down':
+            this.y - 83;
+            break;
+    }
+}
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
