@@ -19,7 +19,7 @@ Enemy.prototype.update = function(dt) {
     if(this.x <= 606) {
         this.x = this.x + dt * this.speed;
     }else {
-        this.x = 0;
+        this.x = -100;
     }
 
 }
@@ -72,9 +72,10 @@ Player.prototype.handleInput = function(keyCode) {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 var allEnemies = [
-    new Enemy(0,1,100),
-    new Enemy(0,2,10),
-    new Enemy(0,3,1)
+    new Enemy(2,1,100),
+    new Enemy(0,2,200),
+    new Enemy(0,3,100),
+    new Enemy(3,2,100)
 ];
 
 // Place the player object in a variable called player
