@@ -34,14 +34,7 @@ var Player = function() {
 }
 
 Player.prototype.update = function() {
-    //this should loop through each enemy and ask if the player is in the same position
-    //if the player is in the same position, player should return to start
-    allEnemies.forEach(function(enemy) {
-        if(enemy.x === player.x && enemy.y === player.y) {
-            player.x = 202;
-            player.y = 332;
-        }
-    });
+
     //If the player object reaches the water, which is at a y-value of less than 83, then
     //the player should return to start. I could edit this later if I want to change the game.
     if(player.y < 83) {

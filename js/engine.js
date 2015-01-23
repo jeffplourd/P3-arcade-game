@@ -80,7 +80,18 @@ var Engine = (function(global) {
      */
     function update(dt) {
         updateEntities(dt);
-        // checkCollisions();
+        checkCollisions();
+    }
+
+    function checkCollisions() {
+        //this should loop through each enemy and ask if the player is in the same position
+        //if the player is in the same position, player should return to start
+        allEnemies.forEach(function(enemy) {
+            if(enemy.y === player.y && enemy.x <= player.x && enemy.x >= player.x - 50) {
+                player.x = 202;
+                player.y = 332;
+            }
+        });
     }
 
     /* This is called by the update function  and loops through all of the
