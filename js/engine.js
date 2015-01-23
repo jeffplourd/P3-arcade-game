@@ -181,6 +181,10 @@ var Engine = (function(global) {
         ctx.font = "36pt Impact";
         ctx.textAlign = "center";
 
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 3;
+        ctx.strokeText("Click to play", canvas.width/2, 200);
+
         ctx.fillStyle = "white";
         ctx.fillText("Jeff Plourd", canvas.width/2, 500);
 

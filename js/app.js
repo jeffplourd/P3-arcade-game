@@ -74,8 +74,8 @@ Player.prototype.handleInput = function(keyCode) {
 var allEnemies = [
     new Enemy(2,1,100),
     new Enemy(0,2,200),
-    new Enemy(0,3,100),
-    new Enemy(3,2,100)
+    new Enemy(0,3,150),
+    new Enemy(3,2,300)
 ];
 
 // Place the player object in a variable called player
