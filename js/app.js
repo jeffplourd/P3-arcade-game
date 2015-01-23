@@ -30,6 +30,7 @@ Enemy.prototype.render = function() {
 var Player = function() {
     this.x = 202;
     this.y = 332;
+    this.spritePlayer = 'images/char-boy.png';
 }
 
 Player.prototype.update = function() {
@@ -39,7 +40,6 @@ Player.prototype.update = function() {
         if(enemy.x === player.x && enemy.y === player.y) {
             player.x = 202;
             player.y = 332;
-            this.spritePlayer = 'images/char-boy.png';
         }
     });
     //If the player object reaches the water, which is at a y-value of less than 83, then
@@ -51,7 +51,7 @@ Player.prototype.update = function() {
 }
 
 Player.prototype.render = function() {
-
+    ctx.drawImage(Resources.get(this.spritePlayer), this.x, this.y);
 }
 
 Player.prototype.handleInput = function(keyCode) {
@@ -74,7 +74,12 @@ Player.prototype.handleInput = function(keyCode) {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-
+var allEnemies = [
+    new Enemy(0,1,100),
+    new Enemy(0,2,10),
+    new Enemy(0,3,1)
+];
+var player = new Player();
 
 
 // This listens for key presses and sends the keys to your
