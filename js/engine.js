@@ -175,7 +175,18 @@ var Engine = (function(global) {
      */
     function reset() {
         // noop
-        ctx.fillRect(100,100,100,100);
+
+        ctx.fillStyle = "red";
+        ctx.fillRect(100,400,100,100);
+        ctx.font = "36pt Impact";
+        ctx.textAlign = "center";
+
+        ctx.fillStyle = "white";
+        ctx.fillText("Jeff Plourd", canvas.width/2, 500);
+
+        ctx.strokeStyle = "DarkTurquoise";
+        ctx.lineWidth = 3;
+        ctx.strokeText("Jeff Plourd", canvas.width/2, 500);
     }
 
     /* Go ahead and load all of the images we know we're going to need to
