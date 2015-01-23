@@ -65,8 +65,11 @@ var Engine = (function(global) {
      */
     function init() {
         reset();
-        lastTime = Date.now();
-        main();
+        canvas.addEventListener('click', function() {
+            lastTime = Date.now();
+            main();
+        });
+
     }
 
     /* This function is called by main (our game loop) and itself calls all
@@ -172,6 +175,7 @@ var Engine = (function(global) {
      */
     function reset() {
         // noop
+        ctx.fillRect(100,100,100,100);
     }
 
     /* Go ahead and load all of the images we know we're going to need to
