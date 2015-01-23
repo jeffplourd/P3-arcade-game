@@ -40,7 +40,14 @@ Player.prototype.update = function() {
             player.x = 202;
             player.y = 332;
         }
-    })
+    });
+    //If the player object reaches the water, which is at a y-value of less than 83, then
+    //the player should return to start. I could edit this later if I want to change the game.
+    if(player.y < 83) {
+        player.x = 202;
+        player.y = 332;
+    }
+
 }
 
 Player.prototype.render = function() {
