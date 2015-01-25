@@ -46,6 +46,10 @@ Player.prototype.update = function() {
         player.x = 202;
         player.y = 332;
     }
+    if(player.x <0 || player.x > 505) {
+        player.x = 202;
+        player.y = 332;
+    }
 }
 
 Player.prototype.render = function() {
