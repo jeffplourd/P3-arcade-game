@@ -64,6 +64,8 @@ var Engine = (function(global) {
      * game loop.
      */
     function init() {
+        //I decided to add a start screen to the game for fun. The event listener below should
+        //Allow the use to begin the game by clicking on the canvas.
         reset();
         canvas.addEventListener('click', function() {
             lastTime = Date.now();
@@ -174,7 +176,8 @@ var Engine = (function(global) {
      * those sorts of things. It's only called once by the init() method.
      */
     function reset() {
-        // noop
+        // Just for fun, I decided to make a basic animation for the start screen.
+        // The game starts when the player clicks on the canvas.
 
         ctx.fillStyle = "red";
         ctx.fillRect(100,400,100,100);
