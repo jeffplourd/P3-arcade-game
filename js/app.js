@@ -43,10 +43,18 @@ Player.prototype.update = function() {
         player.x = 202;
         player.y = 332;
     }
-    //I added the following code to keep the player on the screen
-    if(player.x <0 || player.x >= 505) {
-        player.x = 202;
-        player.y = 332;
+
+    if(player.y > 415) {
+        player.y = 415;
+    }
+
+
+    //I added the following 'if' statements to keep the player on the screen
+    if(player.x <0) {
+        player.x = 0;
+    }
+    if(player.x >= 505) {
+        player.x = 404;
     }
 }
 
